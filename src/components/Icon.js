@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { withCounter } from './CounterProvider';
 
 class Icon extends Component {
   render() {
-    return <div>Icon</div>;
+    return <div>Icon {this.props.counter}</div>;
   }
 }
 
-export default Icon;
+const WithCounter = withCounter(Icon);
+
+export default WithCounter;
